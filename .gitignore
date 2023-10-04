@@ -1,0 +1,21 @@
+# Xcode
+.DS_Store
+*.swp
+*.lock
+*.xcuserstate
+*.mine
+*.backup
+DerivedData/
+*.moved-aside
+*.pbxuser
+*.perspectivev3
+xcuserdata/
+*.hmap
+*.ipa
+*.xcarchive
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/
