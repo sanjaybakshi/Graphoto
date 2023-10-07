@@ -13,107 +13,148 @@ struct ChartView: View {
     //@ObservedObject var photoModel : PhotoModel
     @ObservedObject var photoModel23 : PhotoModel23
     
+    @State var SelectedMonth = ""
+    
     var body: some View {
         
         let photoList = photoModel23.fPhotosModel.GetPhotolist().fPhotoList
         let filterList = photoModel23.fPhotoFilterList
         
         let chartData = filterList.getChartData_month(inputList: photoList)
-         
-
-        Chart {
+        
+        let monthWithMax = chartData.max(by: { $0.numPhotos < $1.numPhotos })
+        
+        VStack()
+        {
             
-            ForEach(chartData) { datum in
- 
-                BarMark(x: .value("year", datum.month),
-                        y: .value("num photos", datum.numPhotos))
-
+            
+            Chart {
+                
+                ForEach(chartData) { datum in
+                    
+                    BarMark(x: .value("num photos", datum.numPhotos),
+                            y: .value("month", datum.month),
+                            width: 20
+                    )
+                    
+                    
+                    
+                    .cornerRadius(20, style: .continuous)
+                    .annotation(position: .overlay, alignment: .trailing) {
+                        Text("\(datum.numPhotos)")
+                            .font(.system(size:12))
+                            .fontWeight(.light)  // Makes the text bold
+                            .foregroundColor(.gray)  // Changes the text color to blue
+                        //.background(.black)
+                    }
+                    .foregroundStyle(SelectedMonth == datum.month ? .green : .blue)
+                    
+                    
+                    
+                    PointMark(x: .value("na", -0.1),
+                              y: .value("na", datum.month))
+                    .symbolSize(0)
+                    
+                    .annotation (position: .leading) {
+                        Text(datum.month)
+                            .font(.system(size:12))
+                            .fontWeight(.light)  // Makes the text bold
+                            .foregroundColor(.gray)  // Changes the text color to blue
+                        
+                    }
+                    
+                    
+                }
             }
-        }
-        .chartXAxis(content: {
-            AxisMarks { value in
-                AxisValueLabel {
-                    if let month = value.as(String.self) {
-                        Text(month)
-                            .rotationEffect(Angle(degrees: 60))
+            
+            
+            /*
+             var hasMax = (monthWithMax != nil)
+             //let grade = score >= 90 ? "A" : score >= 80 ? "B" : "C"
+             
+             var correctDomain = monthWithMax != nil ? ScaleDomain(-2...monthWithMax?.numPhotos) : ScaleDomain(-2...100)
+             */
+            .chartXScale(domain: -100...monthWithMax!.numPhotos+100)
+            .chartXAxis(.hidden)
+            
+            
+            /*
+             .chartYAxisLabel(position: .top, alignment: .center) {
+             Text("Position (meters)")
+             
+             }
+             */
+            
+            .chartYAxis {
+                AxisMarks(position: .leading, values: .automatic) { value in
+                    //AxisGridLine(centered: true, stroke: StrokeStyle(lineWidth: 1))
+                    AxisValueLabel() {
+                        if let strValue = value.as(String.self) {
+                            //Text("\(strValue) cm")
+                            //.font(.system(size: 14))
+                        }
                     }
                 }
             }
-        })
-        Chart {
             
-            ForEach(chartData) { datum in
- 
-                BarMark(x: .value("num photos", datum.numPhotos),
-                        y: .value("year", datum.month))
-
-            }
-            .cornerRadius(10)
-
-        }
-        .chartYAxis(content: {
-            AxisMarks { value in
-                AxisValueLabel {
-                    if let month = value.as(String.self) {
-                        Text(month)
-                            .rotationEffect(Angle(degrees: 60))
-                    }
+            .frame(height: 400) // << HERE
+            
+            
+            .chartOverlay { proxy in
+                GeometryReader { geometry in
+                    Rectangle().fill(.clear).contentShape(Rectangle())
+                    
+                    
+                        .onTapGesture { location in
+                            
+                            SelectedMonth = ""
+                            if let (numPhotos,month) = proxy.value(at: location, as: (Int,String).self) {
+                                
+                                if let monthData = chartData.first(where: { $0.month == month}) {
+                                    
+                                    //if (numPhotos > -1 && numPhotos < monthData.numPhotos ) {
+                                    SelectedMonth = month
+                                    
+                                    //}
+                                }
+                            }
+                        }
+                    
                 }
             }
-        })
-
-
-
-
-
-
-        
-
-        /*
-        .chartXAxis(.hidden)
-        .chartYAxis {
-            AxisMarks(position: .leading, values: chartData.map{$0.month}) { data in
-                AxisValueLabel(format: .dateTime.month(), centered: true)
-            }
         }
-        .chartXScale(domain: 0...9000)
-*/
-
-        
-        /*
-         Chart {
-         
-         
-         ForEach(photoModel.fDevicesList.keys.sorted(), id: \.self) { key in
-         
-         BarMark(x: PlottableValue.value("wtfo", key),
-         y: PlottableValue.value("crewSize", photoModel.fDevicesList[key]!))
-         }
-         
-         
-         }
-         
-         Chart {
-         
-         ForEach(photoModel.fDevicesListHC) { datum in
-         
-         BarMark(x: PlottableValue.value("device", datum.deviceName),
-         y: PlottableValue.value("crewSize", datum.deviceCount))
-         }
-         }
-         
-         
-         Chart {
-         
-         
-         ForEach(photoModel.fDevicesListHC_dict.keys.sorted(), id: \.self) { key in
-         BarMark(x: PlottableValue.value("device", key),
-         y: PlottableValue.value("crewSize", photoModel.fDevicesListHC_dict[key]!))
-         }
-         
-         
-         }
-         Text("Number of items: \(photoModel.fDevicesListHC_dict["iphone10"]!)")
-         */
     }
 }
+
+/*
+#Preview {
+    var test_photoModel = PhotoModel23()
+
+    test_photoModel.fPhotosModel.loadCityDatabase()
+    test_photoModel.fPhotosModel.loadTestingData()
+    
+    ChartView(photoModel23: test_photoModel)
+}
+*/
+struct LoginView_Previews: PreviewProvider {
+   static var previews: some View {
+       
+       var test_photoModel: PhotoModel23 = {
+           let model = PhotoModel23()
+           model.fPhotosModel.loadCityDatabase()
+           model.fPhotosModel.loadTestingData()
+           return model
+       }()
+
+       
+       //static var test_photoModel = PhotoModel23()
+
+        //test_photoModel.fPhotosModel.loadCityDatabase()
+           //test_photoModel.fPhotosModel.loadTestingData()
+
+
+       
+       ChartView(photoModel23: test_photoModel)
+   }
+}
+

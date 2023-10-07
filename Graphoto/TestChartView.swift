@@ -30,6 +30,7 @@ struct TestChartView: View {
     var body: some View {
         
         Chart {
+            
             ForEach(data) {d in
                 
                 /*
@@ -81,7 +82,8 @@ struct TestChartView: View {
 
             }
         }
-        
+        .chartXAxis(.hidden)
+
         .chartXScale(domain: -2...12)
         /*
         .chartYAxisLabel(position: .top, alignment: .center) {

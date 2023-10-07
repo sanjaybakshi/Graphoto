@@ -17,11 +17,11 @@ struct GraphotoApp: App {
             //    .environment(\.managedObjectContext, persistenceController.container.viewContext)
             
             
-            TestChartView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-
-            //MainView()
+            //TestChartView()
             //    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+
+            MainView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
 
             
             

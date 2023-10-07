@@ -10,7 +10,7 @@ import SwiftUI
 struct GraphotoView: View {
     
     
-    @ObservedObject var photoModel22 = PhotoModel22()
+    //@ObservedObject var photoModel22 = PhotoModel22()
     
     @Binding var photoModel: PhotoModel23
 

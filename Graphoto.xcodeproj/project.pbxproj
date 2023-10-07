@@ -18,7 +18,6 @@
 		1A87A5F52ABF7B680021FF7F /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A87A5F42ABF7B680021FF7F /* FilterView.swift */; };
 		1A87A5F92AC160B20021FF7F /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A87A5F82AC160B20021FF7F /* DebugView.swift */; };
 		1A8FD0232AC6897F002BE7DA /* TcloudPhotoRequestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FD0222AC6897F002BE7DA /* TcloudPhotoRequestor.swift */; };
-		1A8FD0252AC69A37002BE7DA /* PhotoModel22.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FD0242AC69A37002BE7DA /* PhotoModel22.swift */; };
 		1A8FD0272AC7793D002BE7DA /* TphotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FD0262AC7793D002BE7DA /* TphotosModel.swift */; };
 		1A8FD0292AC779A4002BE7DA /* ParkBenchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FD0282AC779A3002BE7DA /* ParkBenchTimer.swift */; };
 		1A8FD02B2AC77A1D002BE7DA /* TCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FD02A2AC77A1D002BE7DA /* TCity.swift */; };
@@ -49,7 +48,6 @@
 		1A87A5F42ABF7B680021FF7F /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		1A87A5F82AC160B20021FF7F /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
 		1A8FD0222AC6897F002BE7DA /* TcloudPhotoRequestor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TcloudPhotoRequestor.swift; sourceTree = "<group>"; };
-		1A8FD0242AC69A37002BE7DA /* PhotoModel22.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel22.swift; sourceTree = "<group>"; };
 		1A8FD0262AC7793D002BE7DA /* TphotosModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TphotosModel.swift; sourceTree = "<group>"; };
 		1A8FD0282AC779A3002BE7DA /* ParkBenchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkBenchTimer.swift; sourceTree = "<group>"; };
 		1A8FD02A2AC77A1D002BE7DA /* TCity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCity.swift; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 				1A8FD0322AC78427002BE7DA /* TprogressView.swift */,
 				1A87A5F82AC160B20021FF7F /* DebugView.swift */,
 				1A87A5F02ABF79860021FF7F /* PhotoModel.swift */,
-				1A8FD0242AC69A37002BE7DA /* PhotoModel22.swift */,
 				1A8FD02C2AC77A76002BE7DA /* PhotoModel23.swift */,
 				1A8FD03A2AC7C018002BE7DA /* TphotoFilter.swift */,
 				1A8FD0262AC7793D002BE7DA /* TphotosModel.swift */,
@@ -219,7 +216,6 @@
 				1AF0B3262AC27A6100892AD5 /* dateUtils.swift in Sources */,
 				1A87A5E22ABF784A0021FF7F /* ContentView.swift in Sources */,
 				1A8FD03D2AC7F496002BE7DA /* TestChartView.swift in Sources */,
-				1A8FD0252AC69A37002BE7DA /* PhotoModel22.swift in Sources */,
 				1A8FD0292AC779A4002BE7DA /* ParkBenchTimer.swift in Sources */,
 				1A8FD02F2AC77ADE002BE7DA /* TCityTree.swift in Sources */,
 				1A87A5EF2ABF78710021FF7F /* MainView.swift in Sources */,

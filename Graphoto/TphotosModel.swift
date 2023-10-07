@@ -496,6 +496,23 @@ class TphotosModel : NSObject
         self.fAllCities = TCityDatabase(cacheFile: "Split4x3", read: true, progressUpdateFunc: progressUpdateFunc)
     }
     
+    func loadTestingData()
+    {
+        var t1 = TphotoGraphsAsset()
+        t1.fCity = "Toronto"
+        t1.fCountry = "Canada"
+        t1.fState = "Ontario"        
+        
+        self.fAllPhotos.fPhotoList.append(t1)
+        
+        
+        t1.fCity = "Regina"
+        t1.fCountry = "Canada"
+        t1.fState = "Saskatchewan"
+        self.fAllPhotos.fPhotoList.append(t1)
+
+        
+    }
     func syncPhotosDatabase(progressUpdateFunc: ((Float) -> ())? = nil)
         //
         // Description:
@@ -508,11 +525,13 @@ class TphotosModel : NSObject
             
         let fFetchOptions = PHFetchOptions()
         fFetchOptions.sortDescriptors = [NSSortDescriptor(key:"creationDate", ascending: true)]
-            
+        fFetchOptions.fetchLimit=10000
+        
         //let fetchResult = PHAsset.fetchAssets(with: fetchOptions)
         self.fFetchResult = PHAsset.fetchAssets(with: fFetchOptions)
 
         for i in (0 ..< self.fFetchResult.count) {
+
             let asset = self.fFetchResult.object(at: i)
             
             if let thisPhoto = self.photoFromAsset(asset: asset) {
