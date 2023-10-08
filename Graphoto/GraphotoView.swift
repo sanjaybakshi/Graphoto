@@ -12,7 +12,7 @@ struct GraphotoView: View {
     
     //@ObservedObject var photoModel22 = PhotoModel22()
     
-    @Binding var photoModel: PhotoModel23
+    @EnvironmentObject var phModel23: PhotoModel23
 
     var body: some View {
         
@@ -20,7 +20,7 @@ struct GraphotoView: View {
             
             HStack {
                 
-                FilterView(fPhotoFilterList: $photoModel.fPhotoFilterList)
+                FilterView(phModel23: phModel23)
                 Spacer()
                 
                 VStack() {
@@ -39,7 +39,7 @@ struct GraphotoView: View {
                     Text("Total number of photos: \(photoModel22.fTotalNumPhotos)")
                     Text("Total number of photos on device: \(photoModel22.fTotalNumDevicePhotos)")
                     */
-                    ChartView(photoModel23: photoModel)
+                    ChartView(phModel23: phModel23)
                         .frame(width: geometry.size.width * 0.8) // 60% of the parent width
 
                     

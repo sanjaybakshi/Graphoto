@@ -22,7 +22,7 @@ struct GraphotoApp: App {
 
             MainView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-
+                .environmentObject(PhotoModel23())
             
             
             

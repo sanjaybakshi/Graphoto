@@ -10,18 +10,19 @@ import SwiftUI
 struct MainView: View {
     
 
-    @State var photoModel = PhotoModel23()
+    @EnvironmentObject var phModel23: PhotoModel23
+
     @State var photoDatabaseLoaded = false
 
     var body: some View {
         
         if (photoDatabaseLoaded == true) {
             
-            GraphotoView(photoModel: $photoModel)
+            GraphotoView()
             
         } else {
             
-            LoadPhotosView(photoModel: $photoModel, photoDatabaseLoaded: $photoDatabaseLoaded)
+            LoadPhotosView(photoDatabaseLoaded: $photoDatabaseLoaded)
                     
         }
 

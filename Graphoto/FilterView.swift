@@ -17,7 +17,7 @@ struct FilterView: View {
 
     @State private var selection: String?
 
-    @Binding var fPhotoFilterList : TphotoFilterList
+    //@EnvironmentObject var phModel23: PhotoModel23
 
 
     let items = ["Item 1", "Item 2", "Item 3", "Item 4"]
@@ -27,7 +27,8 @@ struct FilterView: View {
     // implement list selection
     // https://sarunw.com/posts/swiftui-list-selection/
     
-    
+    @ObservedObject var phModel23 : PhotoModel23
+
     
     var body: some View {
         //NavigationStack {
@@ -88,7 +89,9 @@ struct FilterView: View {
         print("Item Selected: \(selection ?? "None")")
 
         if (selection != nil) {
-            fPhotoFilterList.selFilterIndexFrom(Text: selection!)
+            phModel23.fSelectedFilter = selection!
+            
+            //phModel23.fPhotoFilterList.selFilterIndexFrom(Text: selection!)
         }
     }
 }

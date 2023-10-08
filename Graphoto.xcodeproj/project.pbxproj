@@ -75,6 +75,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A33A3752AD1EA8200F2448D /* Unused */ = {
+			isa = PBXGroup;
+			children = (
+				1A8FD0322AC78427002BE7DA /* TprogressView.swift */,
+				1A8FD03C2AC7F496002BE7DA /* TestChartView.swift */,
+				1A87A5F82AC160B20021FF7F /* DebugView.swift */,
+				1A87A5F02ABF79860021FF7F /* PhotoModel.swift */,
+			);
+			path = Unused;
+			sourceTree = "<group>";
+		};
 		1A87A5CE2ABF784A0021FF7F = {
 			isa = PBXGroup;
 			children = (
@@ -99,11 +110,8 @@
 				1A8FD0382AC7A19B002BE7DA /* GraphotoView.swift */,
 				1A87A5F42ABF7B680021FF7F /* FilterView.swift */,
 				1AF0B3272AC2846700892AD5 /* ChartView.swift */,
-				1A8FD03C2AC7F496002BE7DA /* TestChartView.swift */,
 				1A8FD0362AC79F54002BE7DA /* LoadPhotosView.swift */,
-				1A8FD0322AC78427002BE7DA /* TprogressView.swift */,
-				1A87A5F82AC160B20021FF7F /* DebugView.swift */,
-				1A87A5F02ABF79860021FF7F /* PhotoModel.swift */,
+				1A33A3752AD1EA8200F2448D /* Unused */,
 				1A8FD02C2AC77A76002BE7DA /* PhotoModel23.swift */,
 				1A8FD03A2AC7C018002BE7DA /* TphotoFilter.swift */,
 				1A8FD0262AC7793D002BE7DA /* TphotosModel.swift */,

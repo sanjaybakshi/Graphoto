@@ -8,15 +8,9 @@
 import Foundation
 
 
-struct yearChartData: Identifiable {
+struct phChartData: Identifiable {
     var id = UUID()
-    var year: String
-    var numPhotos: Int
-}
-
-struct monthChartData: Identifiable {
-    var id = UUID()
-    var month: String
+    var xVal: String
     var numPhotos: Int
 }
 
@@ -51,7 +45,7 @@ class TphotoFilter {
         return newPhotoList
     }
     
-    func organizedByYear(photoList: [TphotoGraphsAsset]) -> [yearChartData]
+    func organizedByYear(photoList: [TphotoGraphsAsset]) -> [phChartData]
     {
         var photosPerYear = [String: Int]()
         
@@ -69,16 +63,16 @@ class TphotoFilter {
             }
         }
         
-        var yearsChartData = [yearChartData]()
+        var yearsChartData = [phChartData]()
         let sortedYears = Array(photosPerYear.keys).sorted(by: >)
         
         for (y) in sortedYears {
-            yearsChartData.append( yearChartData(year: y, numPhotos: photosPerYear[y]!))
+            yearsChartData.append( phChartData(xVal: y, numPhotos: photosPerYear[y]!))
         }
         return yearsChartData
     }
     
-    func organizedByMonth(photoList: [TphotoGraphsAsset]) -> [monthChartData]
+    func organizedByMonth(photoList: [TphotoGraphsAsset]) -> [phChartData]
     {
         var photosPerMonth = [String: Int]()
         
@@ -96,7 +90,7 @@ class TphotoFilter {
             }
         }
         
-        var monthsChartData = [monthChartData]()
+        var monthsChartData = [phChartData]()
         
         let monthOrder: [String] = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
@@ -107,7 +101,7 @@ class TphotoFilter {
         //var sortedMonths = Array(photosPerMonth.keys).sorted(by: <)
         
         for (m) in sortedMonths {
-            monthsChartData.append(monthChartData(month: m, numPhotos: photosPerMonth[m]!))
+            monthsChartData.append(phChartData(xVal: m, numPhotos: photosPerMonth[m]!))
         }
         
         return monthsChartData
@@ -120,7 +114,14 @@ class TphotoFilter {
 class TphotoFilterList : ObservableObject {
     
     var fFilterList : [TphotoFilter] = []
-    var fSelectedFilterIndex : Int = 0
+    //@Published var fSelectedFilterIndex : Int = 0
+    
+
+    /*
+    var fSelectedFilter : String {
+        return fFilterList[fSelectedFilterIndex].fFilterType
+    }
+*/
     
     let fYearFilterStr      = "Year"
     let fMonthFilterStr     = "Month"
@@ -128,6 +129,8 @@ class TphotoFilterList : ObservableObject {
     let fCountryFilterStr   = "Country"
     let fStateFilterStr     = "State"
     let fCityFilterStr      = "City"
+
+    //@Published var fSelectedFilter : String = "Year"
 
     init()
     {
@@ -139,6 +142,7 @@ class TphotoFilterList : ObservableObject {
         fFilterList.append(TphotoFilter(fType: fCityFilterStr,    filterSetting: []))
     }
 
+    /*
     func selFilterIndexFrom(Text: String)
     {
         if let index = fFilterList.firstIndex(where: { $0.fFilterType == Text }) {
@@ -147,8 +151,39 @@ class TphotoFilterList : ObservableObject {
             fSelectedFilterIndex = 0
         }
     }
+    */
     
-    func getChartData(inputList: [TphotoGraphsAsset]) -> [yearChartData]
+    /*
+    func getChartDataForSelectedFilter(inputList: [TphotoGraphsAsset]) -> [phChartData]?
+    {
+        
+        switch fSelectedFilter {
+        case fMonthFilterStr :
+            return getChartData_month(inputList: inputList)
+        case fYearFilterStr :
+            return getChartData_year(inputList: inputList)
+        default:
+            return getChartData_year(inputList: inputList)
+        }
+    }
+    */
+
+    func getChartData(chartType: String, inputList: [TphotoGraphsAsset]) -> [phChartData]
+    {
+        switch chartType {
+        case fMonthFilterStr :
+            return getChartData_month(inputList: inputList)
+        case fYearFilterStr :
+            return getChartData_year(inputList: inputList)
+
+        default:
+            return getChartData_year(inputList: inputList)
+        }
+
+    }
+                 
+                 
+    func getChartData_year(inputList: [TphotoGraphsAsset]) -> [phChartData]
     {
         // Should apply the filters.
         //
@@ -157,7 +192,7 @@ class TphotoFilterList : ObservableObject {
         return barViewData
     }
  
-    func getChartData_month(inputList: [TphotoGraphsAsset]) -> [monthChartData]
+    func getChartData_month(inputList: [TphotoGraphsAsset]) -> [phChartData]
     {
         // Should apply the filters.
         //
@@ -165,4 +200,6 @@ class TphotoFilterList : ObservableObject {
 
         return barViewData
     }
+    
+
 }

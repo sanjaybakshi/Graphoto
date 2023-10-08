@@ -11,7 +11,7 @@ struct LoadPhotosView: View {
     
     @State private var progress: Double = 0.0
     
-    @Binding var photoModel          : PhotoModel23
+    @EnvironmentObject var phModel23: PhotoModel23
     @Binding var photoDatabaseLoaded : Bool
 
     var body: some View {
@@ -27,7 +27,7 @@ struct LoadPhotosView: View {
         photoDatabaseLoaded = false
         progress = 0
         
-        self.photoModel.loadPhotos(progressVariable: $progress, finishedLoading: $photoDatabaseLoaded)
+        self.phModel23.loadPhotos(progressVariable: $progress, finishedLoading: $photoDatabaseLoaded)
     }
 
 }
