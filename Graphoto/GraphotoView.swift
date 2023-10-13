@@ -14,15 +14,20 @@ struct GraphotoView: View {
     
     @EnvironmentObject var phModel23: PhotoModel23
 
+    @EnvironmentObject var myStateData : MyStateData
+
     var body: some View {
         
         GeometryReader { geometry in
             
             HStack {
                 
-                FilterView(phModel23: phModel23)
-                Spacer()
-                
+                VStack() {
+                    FilterView2(oFilterList: $myStateData.fFilterList,
+                                oSelFilter: $myStateData.fSelectedFilter)
+                    FilterView(phModel23: phModel23)
+                    Spacer()
+                }
                 VStack() {
                     
                     /*

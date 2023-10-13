@@ -1,60 +1,50 @@
 //
-//  FilterView.swift
+//  FilterView2.swift
 //  grafoto
 //
 //  Created by Sanjay Bakshi on 8/4/23.
 //
 
 import SwiftUI
-import Charts
 
 
-struct FilterView: View {
+struct FilterView2: View {
     
-    //@State var editMode: EditMode = .active
+    @Binding var oFilterList : [TfotoFilter]
+    @Binding var oSelFilter  : String
 
-    @State private var fFilterOrder : [String] = ["Year", "Month", "Day", "Country", "State", "City", "Device"]
+    //@State private var selectedItem: String?
 
-    @State private var selection: String?
-
-    //@EnvironmentObject var phModel23: PhotoModel23
-
-
-    let items = ["Item 1", "Item 2", "Item 3", "Item 4"]
-
-    
-    
-    // implement list selection
-    // https://sarunw.com/posts/swiftui-list-selection/
-    
-    @ObservedObject var phModel23 : PhotoModel23
-
-    
     var body: some View {
-        //NavigationStack {
         
         VStack {
-            
-            List(selection: $selection) {
+            Text(oSelFilter)
+        
+            List(selection: $oSelFilter) {
+            //List(selection: $selectedItem) {            
                 
-                ForEach(fFilterOrder, id: \.self) { f in
+                ForEach(oFilterList) { f in
+                    
                     
                     HStack {
-                        Text(f)
+                        Text(f.fFilterName)
+                        //Text("Shit")
                         Spacer()
                         
                         Button {
                             print("do")
                             
                         } label : {
-                            Text("All")
+                            Text(f.fFilterValue)
                         } .frame(width: 70)
                             .background(Color.green)
                             .cornerRadius(3)
                             .fontWeight(.medium)
                             .foregroundColor(Color.white)
-                        
+
                     }
+                      .tag(f.fFilterName)
+                      
                 }
                 .onMove(perform: move)
                 //.contentShape(Rectangle())
@@ -63,11 +53,11 @@ struct FilterView: View {
                 //    print("selected row")
                 //}
                 
-                .onChange(of: selection) { item in
-                    itemSelected()
-                    
+                .onChange(of: oSelFilter) { item in
+                //.onChange(of: selectedItem) { item in
+                    itemSelected()                    
                 }
-                
+
             }
             .background(Color.gray)
             
@@ -81,19 +71,21 @@ struct FilterView: View {
             
         }
     }
-    func move(from source: IndexSet, to destination: Int) {
-        fFilterOrder.move(fromOffsets: source, toOffset: destination)
-    }
-
-
     
+    func move(from source: IndexSet, to destination: Int) {
+        oFilterList.move(fromOffsets: source, toOffset: destination)
+    }
+    
+     
     private func itemSelected() {
-        print("Item Selected: \(selection ?? "None")")
+
         
+        print("Item Selected: \(oSelFilter ?? "None")")
+        //print("Item Selected: \(selectedItem ?? "None")")
+     /*
         if (selection != nil) {
             phModel23.fSelectedFilter = selection!
-            
-            //phModel23.fPhotoFilterList.selFilterIndexFrom(Text: selection!)
-        }
+     */
+     //phModel23.fPhotoFilterList.selFilterIndexFrom(Text: selection!)
     }
 }

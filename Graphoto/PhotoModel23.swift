@@ -14,7 +14,7 @@ class PhotoModel23: ObservableObject {
 
     
     
-    @Published var fPhotosModel     = TphotosModel()
+    @Published var fPhotosModel     = TphotoGraphModel()
     @Published var fPhotoFilterList = TphotoFilterList()
     
     @Published var fSelectedFilter : String = "Year"

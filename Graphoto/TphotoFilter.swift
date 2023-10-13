@@ -24,7 +24,7 @@ class TphotoFilter {
         
     }
     
-    func filterByYear(yearList: [String], inputList: [TphotoGraphsAsset]) -> [TphotoGraphsAsset]
+    func filterByYear(yearList: [String], inputList: [TphotoGraphAsset]) -> [TphotoGraphAsset]
     {
         // If no countries specified, return the full list.
         //
@@ -32,7 +32,7 @@ class TphotoFilter {
             return inputList
         }
         
-        var newPhotoList = [TphotoGraphsAsset]()
+        var newPhotoList = [TphotoGraphAsset]()
         
         for p in inputList {
             if let pDate = p.fAsset.creationDate {
@@ -45,7 +45,7 @@ class TphotoFilter {
         return newPhotoList
     }
     
-    func organizedByYear(photoList: [TphotoGraphsAsset]) -> [phChartData]
+    func organizedByYear(photoList: [TphotoGraphAsset]) -> [phChartData]
     {
         var photosPerYear = [String: Int]()
         
@@ -72,7 +72,7 @@ class TphotoFilter {
         return yearsChartData
     }
     
-    func organizedByMonth(photoList: [TphotoGraphsAsset]) -> [phChartData]
+    func organizedByMonth(photoList: [TphotoGraphAsset]) -> [phChartData]
     {
         var photosPerMonth = [String: Int]()
         
@@ -168,7 +168,7 @@ class TphotoFilterList : ObservableObject {
     }
     */
 
-    func getChartData(chartType: String, inputList: [TphotoGraphsAsset]) -> [phChartData]
+    func getChartData(chartType: String, inputList: [TphotoGraphAsset]) -> [phChartData]
     {
         switch chartType {
         case fMonthFilterStr :
@@ -183,7 +183,7 @@ class TphotoFilterList : ObservableObject {
     }
                  
                  
-    func getChartData_year(inputList: [TphotoGraphsAsset]) -> [phChartData]
+    func getChartData_year(inputList: [TphotoGraphAsset]) -> [phChartData]
     {
         // Should apply the filters.
         //
@@ -192,7 +192,7 @@ class TphotoFilterList : ObservableObject {
         return barViewData
     }
  
-    func getChartData_month(inputList: [TphotoGraphsAsset]) -> [phChartData]
+    func getChartData_month(inputList: [TphotoGraphAsset]) -> [phChartData]
     {
         // Should apply the filters.
         //

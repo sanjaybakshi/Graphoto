@@ -11,6 +11,10 @@ import SwiftUI
 struct GraphotoApp: App {
     let persistenceController = PersistenceController.shared
 
+
+    var myStateData = MyStateData()
+
+    
     var body: some Scene {
         WindowGroup {
             //ContentView()
@@ -22,7 +26,9 @@ struct GraphotoApp: App {
 
             MainView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                .environmentObject(PhotoModel23())
+                //.environmentObject(PhotoModel23())
+                .environmentObject(myStateData)
+            
             
             
             

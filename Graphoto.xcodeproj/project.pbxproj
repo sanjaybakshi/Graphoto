@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A33A3792AD3BA9F00F2448D /* TfotoFilterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A33A3772AD3BA9F00F2448D /* TfotoFilterList.swift */; };
+		1A33A37A2AD3BA9F00F2448D /* TfotoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A33A3782AD3BA9F00F2448D /* TfotoFilter.swift */; };
+		1A33A37C2AD3C04C00F2448D /* FilterView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A33A37B2AD3C04C00F2448D /* FilterView2.swift */; };
+		1A33A37E2AD3C92500F2448D /* MyStateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A33A37D2AD3C92500F2448D /* MyStateData.swift */; };
+		1A860A922AD65956006426CD /* TphotoGraphModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A860A8F2AD65956006426CD /* TphotoGraphModel.swift */; };
+		1A860A932AD65956006426CD /* TphotoGraphAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A860A902AD65956006426CD /* TphotoGraphAsset.swift */; };
+		1A860A942AD65956006426CD /* TphotoGraphAssetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A860A912AD65956006426CD /* TphotoGraphAssetList.swift */; };
+		1A860A982AD7002B006426CD /* TfotoFilter+ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A860A972AD7002B006426CD /* TfotoFilter+ArrayExtensions.swift */; };
+		1A860A9A2AD7046C006426CD /* TchartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A860A992AD7046C006426CD /* TchartData.swift */; };
 		1A87A5DB2ABF784A0021FF7F /* GraphotoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A87A5DA2ABF784A0021FF7F /* GraphotoApp.swift */; };
 		1A87A5DD2ABF784A0021FF7F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A87A5DC2ABF784A0021FF7F /* Persistence.swift */; };
 		1A87A5E02ABF784A0021FF7F /* Graphoto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A87A5DE2ABF784A0021FF7F /* Graphoto.xcdatamodeld */; };
@@ -18,7 +27,6 @@
 		1A87A5F52ABF7B680021FF7F /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A87A5F42ABF7B680021FF7F /* FilterView.swift */; };
 		1A87A5F92AC160B20021FF7F /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A87A5F82AC160B20021FF7F /* DebugView.swift */; };
 		1A8FD0232AC6897F002BE7DA /* TcloudPhotoRequestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FD0222AC6897F002BE7DA /* TcloudPhotoRequestor.swift */; };
-		1A8FD0272AC7793D002BE7DA /* TphotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FD0262AC7793D002BE7DA /* TphotosModel.swift */; };
 		1A8FD0292AC779A4002BE7DA /* ParkBenchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FD0282AC779A3002BE7DA /* ParkBenchTimer.swift */; };
 		1A8FD02B2AC77A1D002BE7DA /* TCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FD02A2AC77A1D002BE7DA /* TCity.swift */; };
 		1A8FD02D2AC77A76002BE7DA /* PhotoModel23.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FD02C2AC77A76002BE7DA /* PhotoModel23.swift */; };
@@ -30,11 +38,22 @@
 		1A8FD0392AC7A19B002BE7DA /* GraphotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FD0382AC7A19B002BE7DA /* GraphotoView.swift */; };
 		1A8FD03B2AC7C018002BE7DA /* TphotoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FD03A2AC7C018002BE7DA /* TphotoFilter.swift */; };
 		1A8FD03D2AC7F496002BE7DA /* TestChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FD03C2AC7F496002BE7DA /* TestChartView.swift */; };
+		1A96C17B2AD50D7800838E9A /* PhotoGraph_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96C17A2AD50D7800838E9A /* PhotoGraph_View.swift */; };
+		1A96C17D2AD51FD400838E9A /* PhotoGraph_ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96C17C2AD51FD400838E9A /* PhotoGraph_ChartView.swift */; };
 		1AF0B3262AC27A6100892AD5 /* dateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF0B3252AC27A6100892AD5 /* dateUtils.swift */; };
 		1AF0B3282AC2846700892AD5 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF0B3272AC2846700892AD5 /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A33A3772AD3BA9F00F2448D /* TfotoFilterList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TfotoFilterList.swift; sourceTree = "<group>"; };
+		1A33A3782AD3BA9F00F2448D /* TfotoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TfotoFilter.swift; sourceTree = "<group>"; };
+		1A33A37B2AD3C04C00F2448D /* FilterView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterView2.swift; sourceTree = "<group>"; };
+		1A33A37D2AD3C92500F2448D /* MyStateData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStateData.swift; sourceTree = "<group>"; };
+		1A860A8F2AD65956006426CD /* TphotoGraphModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TphotoGraphModel.swift; sourceTree = "<group>"; };
+		1A860A902AD65956006426CD /* TphotoGraphAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TphotoGraphAsset.swift; sourceTree = "<group>"; };
+		1A860A912AD65956006426CD /* TphotoGraphAssetList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TphotoGraphAssetList.swift; sourceTree = "<group>"; };
+		1A860A972AD7002B006426CD /* TfotoFilter+ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TfotoFilter+ArrayExtensions.swift"; sourceTree = "<group>"; };
+		1A860A992AD7046C006426CD /* TchartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TchartData.swift; sourceTree = "<group>"; };
 		1A87A5D72ABF784A0021FF7F /* Graphoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graphoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A87A5DA2ABF784A0021FF7F /* GraphotoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphotoApp.swift; sourceTree = "<group>"; };
 		1A87A5DC2ABF784A0021FF7F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -48,7 +67,6 @@
 		1A87A5F42ABF7B680021FF7F /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		1A87A5F82AC160B20021FF7F /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
 		1A8FD0222AC6897F002BE7DA /* TcloudPhotoRequestor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TcloudPhotoRequestor.swift; sourceTree = "<group>"; };
-		1A8FD0262AC7793D002BE7DA /* TphotosModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TphotosModel.swift; sourceTree = "<group>"; };
 		1A8FD0282AC779A3002BE7DA /* ParkBenchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkBenchTimer.swift; sourceTree = "<group>"; };
 		1A8FD02A2AC77A1D002BE7DA /* TCity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCity.swift; sourceTree = "<group>"; };
 		1A8FD02C2AC77A76002BE7DA /* PhotoModel23.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel23.swift; sourceTree = "<group>"; };
@@ -60,6 +78,8 @@
 		1A8FD0382AC7A19B002BE7DA /* GraphotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphotoView.swift; sourceTree = "<group>"; };
 		1A8FD03A2AC7C018002BE7DA /* TphotoFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TphotoFilter.swift; sourceTree = "<group>"; };
 		1A8FD03C2AC7F496002BE7DA /* TestChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestChartView.swift; sourceTree = "<group>"; };
+		1A96C17A2AD50D7800838E9A /* PhotoGraph_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGraph_View.swift; sourceTree = "<group>"; };
+		1A96C17C2AD51FD400838E9A /* PhotoGraph_ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGraph_ChartView.swift; sourceTree = "<group>"; };
 		1AF0B3252AC27A6100892AD5 /* dateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateUtils.swift; sourceTree = "<group>"; };
 		1AF0B3272AC2846700892AD5 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +98,7 @@
 		1A33A3752AD1EA8200F2448D /* Unused */ = {
 			isa = PBXGroup;
 			children = (
+				1A33A3772AD3BA9F00F2448D /* TfotoFilterList.swift */,
 				1A8FD0322AC78427002BE7DA /* TprogressView.swift */,
 				1A8FD03C2AC7F496002BE7DA /* TestChartView.swift */,
 				1A87A5F82AC160B20021FF7F /* DebugView.swift */,
@@ -105,16 +126,17 @@
 		1A87A5D92ABF784A0021FF7F /* Graphoto */ = {
 			isa = PBXGroup;
 			children = (
-				1A87A5DA2ABF784A0021FF7F /* GraphotoApp.swift */,
-				1A87A5EE2ABF78710021FF7F /* MainView.swift */,
 				1A8FD0382AC7A19B002BE7DA /* GraphotoView.swift */,
+				1A96C1792AD50B5C00838E9A /* Good code */,
 				1A87A5F42ABF7B680021FF7F /* FilterView.swift */,
 				1AF0B3272AC2846700892AD5 /* ChartView.swift */,
 				1A8FD0362AC79F54002BE7DA /* LoadPhotosView.swift */,
 				1A33A3752AD1EA8200F2448D /* Unused */,
 				1A8FD02C2AC77A76002BE7DA /* PhotoModel23.swift */,
+				1A860A902AD65956006426CD /* TphotoGraphAsset.swift */,
+				1A860A912AD65956006426CD /* TphotoGraphAssetList.swift */,
+				1A860A8F2AD65956006426CD /* TphotoGraphModel.swift */,
 				1A8FD03A2AC7C018002BE7DA /* TphotoFilter.swift */,
-				1A8FD0262AC7793D002BE7DA /* TphotosModel.swift */,
 				1A8FD0222AC6897F002BE7DA /* TcloudPhotoRequestor.swift */,
 				1A8FD0282AC779A3002BE7DA /* ParkBenchTimer.swift */,
 				1A8FD02A2AC77A1D002BE7DA /* TCity.swift */,
@@ -138,6 +160,22 @@
 				1A87A5E72ABF784B0021FF7F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1A96C1792AD50B5C00838E9A /* Good code */ = {
+			isa = PBXGroup;
+			children = (
+				1A33A37D2AD3C92500F2448D /* MyStateData.swift */,
+				1A860A992AD7046C006426CD /* TchartData.swift */,
+				1A96C17C2AD51FD400838E9A /* PhotoGraph_ChartView.swift */,
+				1A860A972AD7002B006426CD /* TfotoFilter+ArrayExtensions.swift */,
+				1A96C17A2AD50D7800838E9A /* PhotoGraph_View.swift */,
+				1A87A5EE2ABF78710021FF7F /* MainView.swift */,
+				1A87A5DA2ABF784A0021FF7F /* GraphotoApp.swift */,
+				1A33A37B2AD3C04C00F2448D /* FilterView2.swift */,
+				1A33A3782AD3BA9F00F2448D /* TfotoFilter.swift */,
+			);
+			path = "Good code";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,23 +254,33 @@
 				1A87A5E02ABF784A0021FF7F /* Graphoto.xcdatamodeld in Sources */,
 				1A8FD03B2AC7C018002BE7DA /* TphotoFilter.swift in Sources */,
 				1A8FD0312AC77B2E002BE7DA /* fileUtils.swift in Sources */,
+				1A96C17D2AD51FD400838E9A /* PhotoGraph_ChartView.swift in Sources */,
+				1A860A922AD65956006426CD /* TphotoGraphModel.swift in Sources */,
 				1AF0B3282AC2846700892AD5 /* ChartView.swift in Sources */,
 				1A87A5DB2ABF784A0021FF7F /* GraphotoApp.swift in Sources */,
-				1A8FD0272AC7793D002BE7DA /* TphotosModel.swift in Sources */,
 				1A87A5F92AC160B20021FF7F /* DebugView.swift in Sources */,
+				1A96C17B2AD50D7800838E9A /* PhotoGraph_View.swift in Sources */,
 				1A8FD0392AC7A19B002BE7DA /* GraphotoView.swift in Sources */,
 				1AF0B3262AC27A6100892AD5 /* dateUtils.swift in Sources */,
 				1A87A5E22ABF784A0021FF7F /* ContentView.swift in Sources */,
 				1A8FD03D2AC7F496002BE7DA /* TestChartView.swift in Sources */,
 				1A8FD0292AC779A4002BE7DA /* ParkBenchTimer.swift in Sources */,
+				1A33A37A2AD3BA9F00F2448D /* TfotoFilter.swift in Sources */,
+				1A860A942AD65956006426CD /* TphotoGraphAssetList.swift in Sources */,
+				1A33A37E2AD3C92500F2448D /* MyStateData.swift in Sources */,
+				1A33A3792AD3BA9F00F2448D /* TfotoFilterList.swift in Sources */,
 				1A8FD02F2AC77ADE002BE7DA /* TCityTree.swift in Sources */,
 				1A87A5EF2ABF78710021FF7F /* MainView.swift in Sources */,
 				1A87A5DD2ABF784A0021FF7F /* Persistence.swift in Sources */,
 				1A8FD0372AC79F54002BE7DA /* LoadPhotosView.swift in Sources */,
+				1A860A982AD7002B006426CD /* TfotoFilter+ArrayExtensions.swift in Sources */,
+				1A860A932AD65956006426CD /* TphotoGraphAsset.swift in Sources */,
 				1A8FD02D2AC77A76002BE7DA /* PhotoModel23.swift in Sources */,
 				1A8FD0332AC78427002BE7DA /* TprogressView.swift in Sources */,
+				1A33A37C2AD3C04C00F2448D /* FilterView2.swift in Sources */,
 				1A8FD02B2AC77A1D002BE7DA /* TCity.swift in Sources */,
 				1A8FD0232AC6897F002BE7DA /* TcloudPhotoRequestor.swift in Sources */,
+				1A860A9A2AD7046C006426CD /* TchartData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
