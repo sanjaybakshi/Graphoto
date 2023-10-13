@@ -98,6 +98,13 @@
 		1A33A3752AD1EA8200F2448D /* Unused */ = {
 			isa = PBXGroup;
 			children = (
+				1A87A5E12ABF784A0021FF7F /* ContentView.swift */,
+				1A8FD0222AC6897F002BE7DA /* TcloudPhotoRequestor.swift */,
+				1A8FD03A2AC7C018002BE7DA /* TphotoFilter.swift */,
+				1A8FD02C2AC77A76002BE7DA /* PhotoModel23.swift */,
+				1A87A5F42ABF7B680021FF7F /* FilterView.swift */,
+				1A8FD0382AC7A19B002BE7DA /* GraphotoView.swift */,
+				1AF0B3272AC2846700892AD5 /* ChartView.swift */,
 				1A33A3772AD3BA9F00F2448D /* TfotoFilterList.swift */,
 				1A8FD0322AC78427002BE7DA /* TprogressView.swift */,
 				1A8FD03C2AC7F496002BE7DA /* TestChartView.swift */,
@@ -126,24 +133,25 @@
 		1A87A5D92ABF784A0021FF7F /* Graphoto */ = {
 			isa = PBXGroup;
 			children = (
-				1A8FD0382AC7A19B002BE7DA /* GraphotoView.swift */,
-				1A96C1792AD50B5C00838E9A /* Good code */,
-				1A87A5F42ABF7B680021FF7F /* FilterView.swift */,
-				1AF0B3272AC2846700892AD5 /* ChartView.swift */,
+				1A33A37D2AD3C92500F2448D /* MyStateData.swift */,
 				1A8FD0362AC79F54002BE7DA /* LoadPhotosView.swift */,
+				1A860A992AD7046C006426CD /* TchartData.swift */,
+				1A96C17C2AD51FD400838E9A /* PhotoGraph_ChartView.swift */,
+				1A860A972AD7002B006426CD /* TfotoFilter+ArrayExtensions.swift */,
+				1A96C17A2AD50D7800838E9A /* PhotoGraph_View.swift */,
+				1A87A5EE2ABF78710021FF7F /* MainView.swift */,
+				1A87A5DA2ABF784A0021FF7F /* GraphotoApp.swift */,
+				1A33A37B2AD3C04C00F2448D /* FilterView2.swift */,
+				1A33A3782AD3BA9F00F2448D /* TfotoFilter.swift */,
 				1A33A3752AD1EA8200F2448D /* Unused */,
-				1A8FD02C2AC77A76002BE7DA /* PhotoModel23.swift */,
 				1A860A902AD65956006426CD /* TphotoGraphAsset.swift */,
 				1A860A912AD65956006426CD /* TphotoGraphAssetList.swift */,
 				1A860A8F2AD65956006426CD /* TphotoGraphModel.swift */,
-				1A8FD03A2AC7C018002BE7DA /* TphotoFilter.swift */,
-				1A8FD0222AC6897F002BE7DA /* TcloudPhotoRequestor.swift */,
 				1A8FD0282AC779A3002BE7DA /* ParkBenchTimer.swift */,
 				1A8FD02A2AC77A1D002BE7DA /* TCity.swift */,
 				1A8FD02E2AC77ADE002BE7DA /* TCityTree.swift */,
 				1A8FD0302AC77B2E002BE7DA /* fileUtils.swift */,
 				1AF0B3252AC27A6100892AD5 /* dateUtils.swift */,
-				1A87A5E12ABF784A0021FF7F /* ContentView.swift */,
 				1A87A5DC2ABF784A0021FF7F /* Persistence.swift */,
 				1A87A5E32ABF784B0021FF7F /* Assets.xcassets */,
 				1A8FD0342AC797D3002BE7DA /* Split4x3.txt */,
@@ -160,22 +168,6 @@
 				1A87A5E72ABF784B0021FF7F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		1A96C1792AD50B5C00838E9A /* Good code */ = {
-			isa = PBXGroup;
-			children = (
-				1A33A37D2AD3C92500F2448D /* MyStateData.swift */,
-				1A860A992AD7046C006426CD /* TchartData.swift */,
-				1A96C17C2AD51FD400838E9A /* PhotoGraph_ChartView.swift */,
-				1A860A972AD7002B006426CD /* TfotoFilter+ArrayExtensions.swift */,
-				1A96C17A2AD50D7800838E9A /* PhotoGraph_View.swift */,
-				1A87A5EE2ABF78710021FF7F /* MainView.swift */,
-				1A87A5DA2ABF784A0021FF7F /* GraphotoApp.swift */,
-				1A33A37B2AD3C04C00F2448D /* FilterView2.swift */,
-				1A33A3782AD3BA9F00F2448D /* TfotoFilter.swift */,
-			);
-			path = "Good code";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -5,6 +5,7 @@
 //  Created by Sanjay Bakshi on 9/29/23.
 //
 
+#if false
 import Foundation
 
 class TfotoFilterList : ObservableObject {
@@ -28,3 +29,5 @@ class TfotoFilterList : ObservableObject {
         fList.append(TfotoFilter(name: TfotoFilterList.sCityFilterStr,    value: []))
     }
 }
+#endif
+

@@ -5,6 +5,7 @@
 //  Created by Sanjay Bakshi on 9/29/23.
 //
 
+#if false
 import SwiftUI
 
 struct GraphotoView: View {
@@ -12,7 +13,7 @@ struct GraphotoView: View {
     
     //@ObservedObject var photoModel22 = PhotoModel22()
     
-    @EnvironmentObject var phModel23: PhotoModel23
+    //@EnvironmentObject var phModel23: PhotoModel23
 
     @EnvironmentObject var myStateData : MyStateData
 
@@ -59,4 +60,6 @@ struct GraphotoView: View {
         }
     }
 }
+
+#endif
 

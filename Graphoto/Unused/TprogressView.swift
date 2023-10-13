@@ -4,7 +4,7 @@
 //
 //  Created by Sanjay Bakshi on 9/29/23.
 //
-
+#if false
 import SwiftUI
 
 struct TprogressView: View {
@@ -27,3 +27,5 @@ struct TprogressView: View {
 #Preview {
     ProgressView()
 }
+#endif
+

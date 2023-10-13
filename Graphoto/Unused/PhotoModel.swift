@@ -4,7 +4,7 @@
 //
 //  Created by Sanjay Bakshi on 9/23/23.
 //
-
+#if false
 import Foundation
 
 import Photos
@@ -309,3 +309,5 @@ class PhotoModel: ObservableObject {
     }
     
 }
+#endif
+
